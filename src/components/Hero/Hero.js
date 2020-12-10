@@ -5,7 +5,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 
 import styles from "./Hero.module.css";
 
-import SocialLinks from "../constants/socialLinks"
+import SocialLinks from "../../constants/socialLinks"
 
 const Hero = () => {
   const { file: { childImageSharp: { fluid }}} = useStaticQuery(query);

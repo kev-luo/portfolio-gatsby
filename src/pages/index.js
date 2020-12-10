@@ -1,18 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Projects from "../components/Projects"
-import Hero from "../components/Hero"
+import Layout from "../components/Layout/Layout";
+import Projects from "../components/Projects/Projects"
+import Hero from "../components/Hero/Hero"
 import "../main.css"
 
 export default ({ data }) => {
-  console.log(data);
+  const { allStrapiProjects: { nodes } } = data;
   return (
     <>
       <Layout>
         <Hero />
-        <Projects />
+        <Projects projects={nodes} title="Featured Projects"/>
       </Layout>
     </>
   )
@@ -29,7 +29,7 @@ export const query = graphql`
         url
         repo
         media {
-          relativePath
+          publicURL
         }
         stack {
           name
