@@ -4,12 +4,12 @@ import { FaLinkedin, FaGithub } from "react-icons/fa"
 const data = [
   {
     id: 1,
-    icon: <FaLinkedin></FaLinkedin>,
+    icon: <FaLinkedin className="socialLink"></FaLinkedin>,
     url: "https://www.linkedin.com/in/kevinluo49/",
   },
   {
     id: 2,
-    icon: <FaGithub></FaGithub>,
+    icon: <FaGithub className="socialLink"></FaGithub>,
     url: "https://github.com/kev-luo",
   },
 ]

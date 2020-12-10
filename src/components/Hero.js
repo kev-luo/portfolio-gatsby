@@ -11,14 +11,14 @@ const Hero = () => {
   const { file: { childImageSharp: { fluid }}} = useStaticQuery(query);
   return (
     <header className={styles.hero}>
-      <div className={clsx(styles.sectionCenter, styles.heroCenter)}>
+      <div className={clsx("sectionCenter", styles.heroCenter)}>
         <article className={styles.heroInfo}>
           <div>
             <div className={styles.underline}></div>
             <h1>I'm Kevin</h1>
             <h4>Fullstack Web Developer</h4>
             <Link to="contact" className={styles.btn}>Contact me</Link>
-            <SocialLinks />
+            <SocialLinks styles={styles.heroIcons}/>
           </div>
         </article>
         <Image fluid={fluid} className={styles.heroImg}/>
