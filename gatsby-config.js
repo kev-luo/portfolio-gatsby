@@ -5,6 +5,21 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [`gatsby-plugin-material-ui`],
+  siteMetadata: {
+    title: "Kevin Luo Portfolio",
+    description: "Kevin's portfolio site",
+    author: "Kevin Luo",
+  },
+  plugins: [
+    `gatsby-plugin-material-ui`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+  ],
 }

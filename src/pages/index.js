@@ -1,8 +1,15 @@
 import React from "react"
 
-import Layout from "../components/Navbar";
-import "../main.css";
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import "../main.css"
 
-export default function Home() {
-  return <Layout>Hello world!</Layout>
+export default () => {
+  return (
+    <>
+    <Layout>
+      <Hero />
+    </Layout>
+    </>
+  )
 }

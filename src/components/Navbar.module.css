@@ -6,6 +6,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
+  z-index: 200;
 }
 .navCenter {
   width: 95vw;
