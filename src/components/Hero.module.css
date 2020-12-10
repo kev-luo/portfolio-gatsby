@@ -31,7 +31,7 @@
   font-size: 0.875rem;
   margin-top: 1.25rem;
   border: 2px solid transparent;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
   transition: var(--transition);
 }
@@ -48,4 +48,22 @@
 }
 .heroImg {
   display: none;
+}
+@media screen and (min-width: 992px) {
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65%;
+    right: 0;
+    bottom: 0;
+  }
+  .heroCenter {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .heroImg {
+    display: block;
+    grid-row: 1/1;
+    grid-column: 6/-1;
+  }
 }
