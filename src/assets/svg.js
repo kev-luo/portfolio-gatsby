@@ -11,7 +11,7 @@ export function IconOne() {
     >
       <g>
         <path
-          fill="#000"
+          fill="#381D57"
           fillOpacity="1"
           fillRule="evenodd"
           strokeWidth="0.183"
@@ -31,16 +31,14 @@ export function IconTwo() {
       version="1.1"
       viewBox="0 0 210 297"
     >
-      <g fill="#c4f4f5" fillOpacity="1" fillRule="evenodd">
+      <g fill="#09531F" strokeWidth="0.343">
         <path
-          strokeWidth="0.143"
-          d="M218.046 114.019H235.093V178.75400000000002H218.046z"
-          transform="matrix(1 .00135 -.50976 .86031 0 0)"
+          d="M-180.152 -245.357H-119.80399999999999V-228.319H-180.152z"
+          transform="matrix(.56272 -.82665 -.99998 -.00668 0 0)"
         ></path>
         <path
-          strokeWidth="0.136"
-          d="M-5.285 -261.374H11.782V-202.92100000000002H-5.285z"
-          transform="matrix(1 .00175 -.65142 -.75871 0 0)"
+          d="M179.858 -44.879H240.20600000000002V-27.840999999999998H179.858z"
+          transform="matrix(.551 .83451 -.99997 -.00744 0 0)"
         ></path>
       </g>
     </svg>

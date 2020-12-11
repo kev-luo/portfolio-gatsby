@@ -42,7 +42,7 @@
   left: 1rem;
 }
 .logoTwo {
-  top: -1.38rem;
+  top: -1.44rem;
   left: -1.2rem;
 }
 @media (min-width: 768px) {
@@ -63,13 +63,19 @@
     margin-left: 1rem;
   }
   .navLinks a {
+    transition: all 0.3s linear;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     letter-spacing: var(--spacing);
-    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(#532273, #541C8C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid transparent;
+    padding: .5rem 1rem;
   }
   .navLinks a:hover {
-    color: var(--clr-primary-5);
+    border: 2px solid white;
   }
 }
