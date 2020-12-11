@@ -8,7 +8,6 @@ export default ({ data }) => {
   const { allStrapiProjects: { nodes } } = data;
   return (
     <Layout>
-      Projects
       <Projects projects={nodes} title="Featured Projects"/>
     </Layout>
   )

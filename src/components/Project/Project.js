@@ -2,12 +2,15 @@ import React from 'react'
 import Image from "gatsby-image"
 
 const Project = ({ project }) => {
+  const { description, media, name } = project;
   return (
     <div style={styles.container}>
+      <h3>{name}</h3>
       <Image
-          fluid={project.media.childImageSharp.fluid}
+          fluid={media.childImageSharp.fluid}
           alt="projectGif"
       />
+      <p>{description}</p>
     </div>
   )
 }

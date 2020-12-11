@@ -5,7 +5,7 @@ import Project from "../Project/Project";
 const Projects = ({ projects, title }) => {
   return (
     <div>
-      {title}
+      <h2 style={styles.title}>{title}</h2>
       <div style={styles.container}>
         {projects.map((project, index) => (
           <Project key={index} project={project} />
@@ -17,7 +17,10 @@ const Projects = ({ projects, title }) => {
 
 const styles = {
   container: {
-    display: "flex"
+    display: "flex",
+  },
+  title: {
+    textAlign: "center"
   }
 }
 

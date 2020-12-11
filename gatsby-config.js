@@ -27,21 +27,15 @@ module.exports = {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000,
         contentTypes: [`projects`],
+        singleTypes: [`about`],
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Lato`,
-            variants: [`400`],
-          },
-        ],
+        google: {
+          families: ["Source Sans Pro:400,700", "Lato:400,700"],
+        },
       },
     },
   ],
