@@ -29,7 +29,7 @@ export default ({ style }) => {
     <ul className={`${style ? style : ""}`}>
       {data.map(link => (
         <li key={link.id}>
-          <Link to={link.url}>{link.text}</Link>
+          <Link to={link.url} activeStyle={{borderRight: "1px solid var(--clr-primary-8)", borderLeft: "1px solid var(--clr-primary-8)"}}>{link.text}</Link>
         </li>
       ))}
     </ul>

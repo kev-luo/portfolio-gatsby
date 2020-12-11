@@ -11,7 +11,7 @@ export function IconOne() {
     >
       <g>
         <path
-          fill="#381D57"
+          fill="#541C8C"
           fillOpacity="1"
           fillRule="evenodd"
           strokeWidth="0.183"

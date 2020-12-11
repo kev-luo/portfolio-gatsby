@@ -1,8 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
+import styled from "styled-components";
 
 import Layout from "../components/Layout/Layout"
+
+const StyledImg = styled(BackgroundImage)`
+  width: 60vw;
+  height: 80vh;
+`
+const Overlay = styled.div`
+  background: radial-gradient(closest-side, transparent, var(--clr-bg-1));
+  height: 100%;
+`
 
 const About = ({ data }) => {
   const {
@@ -21,25 +31,22 @@ const About = ({ data }) => {
     <Layout>
       <div>
         <h2>{title}</h2>
-        <div style={styles.imgContainer}>
-          <Image fluid={fluid} />
+        <div style={{display: "flex"}}>
+          <StyledImg
+            fluid={fluid}
+          >
+            <Overlay />
+          </StyledImg>
+          <div>{content}</div>
+          <ul>
+            {stack.map(item => (
+              <li key={item.id}>{item.name}</li>
+            ))}
+          </ul>
         </div>
-        <div>{content}</div>
-        <ul>
-          {stack.map(item => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
       </div>
     </Layout>
   )
-}
-
-const styles = {
-  imgContainer: {
-    width: "500px",
-    height: "500px",
-  }
 }
 
 export const query = graphql`

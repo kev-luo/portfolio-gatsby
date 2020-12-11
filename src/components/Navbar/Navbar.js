@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <div classname={styles.logoContainer}>
+          <div className={styles.logoContainer}>
             <div className={styles.logoOne}>
               <IconOne />
             </div>
