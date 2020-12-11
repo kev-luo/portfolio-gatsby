@@ -11,7 +11,7 @@ module.exports = {
     author: "Kevin Luo",
   },
   plugins: [
-    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,6 +27,21 @@ module.exports = {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000,
         contentTypes: [`projects`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Source Sans Pro`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Lato`,
+            variants: [`400`],
+          },
+        ],
       },
     },
   ],
