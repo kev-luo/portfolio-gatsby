@@ -31,6 +31,20 @@
 .navLinks {
   display: none;
 }
+.logoContainer {
+  position: relative;
+}
+.logoOne, .logoTwo {
+  position: absolute;
+}
+.logoOne {
+  top: 0;
+  left: 1rem;
+}
+.logoTwo {
+  top: -1.38rem;
+  left: -1.2rem;
+}
 @media (min-width: 768px) {
   .navCenter {
     display: grid;
