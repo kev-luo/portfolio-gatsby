@@ -1,17 +1,18 @@
 import React from "react"
 
-import Project from "../Project/Project";
+import { StyledPage, SectionCenter, SectionTitle } from "../../styles/Styled"
+import Project from "../Project/Project"
 
 const Projects = ({ projects, title }) => {
   return (
-    <div>
-      <h2 style={styles.title}>{title}</h2>
-      <div style={styles.container}>
+    <StyledPage>
+      <SectionTitle>{title}</SectionTitle>
+      <SectionCenter>
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
-      </div>
-    </div>
+      </SectionCenter>
+    </StyledPage>
   )
 }
 
@@ -19,9 +20,6 @@ const styles = {
   container: {
     display: "flex",
   },
-  title: {
-    textAlign: "center"
-  }
 }
 
 export default Projects
