@@ -16,10 +16,4 @@ const Projects = ({ projects, title }) => {
   )
 }
 
-const styles = {
-  container: {
-    display: "flex",
-  },
-}
-
 export default Projects
