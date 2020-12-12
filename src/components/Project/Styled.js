@@ -31,11 +31,21 @@ export const ProjectTitle = styled.h3`
 `
 
 export const ProjectDescription = styled.p`
-
+  margin-bottom: .75rem;
 `
 export const ProjectStack = styled.div`
-
+  span {
+    display: inline-block;
+    margin: .25rem .5rem .25rem 0;
+    padding: .25rem .5rem;
+    background: var(--clr-bg-1);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--clr-secondary-1);
+    border-radius: 5px;
+  }
 `
 export const ProjectLinks = styled.div`
-
+  margin-top: .75rem;
 `
