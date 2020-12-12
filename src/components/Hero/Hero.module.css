@@ -29,14 +29,15 @@
   font-weight: 700;
   font-size: 0.875rem;
   margin-top: 1.25rem;
-  border: 2px solid var(--clr-primary-2);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-out;
-  color: var(--clr-primary-2);
+  border: 2px solid var(--clr-primary-6);
+  color: var(--clr-primary-6);
 }
 .btn:hover {
-  color: var(--clr-primary-8);
-  border-color: var(--clr-primary-8);
+  color: var(--clr-primary-4);
+  border-color: var(--clr-primary-4);
+  transform: scale(1.1);
 }
 .heroIcons {
   list-style: none;

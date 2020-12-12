@@ -14,7 +14,7 @@ const Hero = () => {
           <div>
             <div className={styles.underline}></div>
             <h1 style={{color: "#541C8C"}}>Kevin <span style={{color: "#09531F"}}>Luo</span></h1>
-            <h4>Fullstack Web Developer</h4>
+            <h3>Fullstack Web Developer</h3>
             <Link to="projects" className={styles.btn}>View Work</Link>
             <SocialLinks styles={styles.heroIcons}/>
           </div>
