@@ -5,13 +5,15 @@
   --clr-primary-2: hsl(185, 84%, 25%);
   --clr-primary-3: hsl(185, 81%, 29%);
   --clr-primary-4: hsl(184, 77%, 34%);
-  --clr-primary-5: #2caeba;
+  --clr-primary-5: #4CA0A6;
   /* lighter shades of primary color */
   --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
+  --clr-primary-7: #52d1da;
+  --clr-primary-8: #88ebf2;
   --clr-primary-9: hsl(185, 94%, 87%);
   --clr-primary-10: hsl(186, 100%, 94%);
+  /* gold - secondary color */
+  --clr-secondary-1: #A69B55;
   /* dark purple - used for background */
   --clr-bg-1: #31363B;
   --clr-bg-2: #0d001a;
@@ -72,6 +74,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: var(--clr-secondary-1)
 }
 
 h3 {

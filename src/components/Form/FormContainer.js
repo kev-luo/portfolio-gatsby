@@ -13,8 +13,8 @@ const StyledForm = styled.form`
   width: 25%;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 11px 11px 11px 0px rgba(0, 0, 0, 0.1),
-    -11px -11px 11px 0px rgba(77, 77, 77, 0.1);
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 6px 0px rgba(77, 77, 77, 0.1);
   border: 1px solid var(--clr-bg-1);
   border-radius: 25px;
   background-color: var(--clr-bg-1);
@@ -24,17 +24,22 @@ const Label = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 `
 
 const Input = styled.input`
   margin-top: 0.25rem;
   border: 2px solid transparent;
-  border-radius: 25px;
+  border-radius: 50px;
+  background: var(--clr-bg-1);
+  color: var(--clr-grey-10);
   outline: none;
-  padding: 0.25rem;
+  padding: 0.6rem 1rem;
+  box-shadow: -3px -3px 4px 0 rgba(77, 77, 77, 0.1) inset,
+    2px 2px 3px 0 rgba(0, 0, 0, 0.25) inset;
   &:focus {
-    border-color: var(--clr-primary-5);
+    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25),
+      -12px -12px 16px 0px rgba(77, 77, 77, 0.1);
   }
 `
 
@@ -42,29 +47,41 @@ const TextArea = styled.textarea`
   margin-top: 0.25rem;
   border: 2px solid transparent;
   border-radius: 25px;
+  background: var(--clr-bg-1);
+  color: var(--clr-grey-10);
   outline: none;
-  padding: 0.25rem;
+  padding: 0.6rem 1rem;
+  box-shadow: -3px -3px 4px 0 rgba(77, 77, 77, 0.1) inset,
+    2px 2px 3px 0 rgba(0, 0, 0, 0.25) inset;
   &:focus {
-    border-color: var(--clr-primary-5);
+    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.25),
+      -12px -12px 16px 0px rgba(77, 77, 77, 0.1);
   }
 `
 
 const Button = styled.button`
   cursor: pointer;
-  width: 8rem;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
+  width: 9rem;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
   padding: 1rem 2rem;
   margin-top: 0.5rem;
   background: var(--clr-bg-1);
   border: 2px solid var(--clr-bg-1);
   color: var(--clr-primary-5);
-  border-radius: 25px;
-  box-shadow: 7px 7px 11px 0px rgba(0, 0, 0, 0.1),
-    -7px -7px 11px 0px rgba(77, 77, 77, 0.1);
+  border-radius: 50px;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.25),
+    -3px -3px 4px 0px rgba(77, 77, 77, 0.1);
+  transition: all 0.2s ease-out;
+  &:hover {
+    color: var(--clr-primary-8);
+  }
   &:focus {
     outline: none;
+    box-shadow: -3px -3px 4px 0 rgba(77, 77, 77, 0.1) inset,
+      2px 2px 3px 0 rgba(0, 0, 0, 0.25) inset;
   }
 `
 

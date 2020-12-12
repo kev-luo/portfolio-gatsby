@@ -9,7 +9,7 @@
   margin-left: 0;
   width: 5rem;
   height: 0.25rem;
-  background: var(--clr-primary-5);
+  background: var(--clr-grey-5);
 }
 .heroCenter {
   height: 100%;
@@ -22,7 +22,7 @@
 }
 .heroInfo {
   /* border: 1px solid white; */
-  padding: 5rem;
+  padding: 5rem 8rem;
   margin-top: 5rem;
   border-radius: 50px;
   border: 1px solid var(--clr-bg-1);
@@ -39,16 +39,20 @@
   font-weight: 700;
   font-size: 0.875rem;
   margin-top: 1.25rem;
-  box-shadow: 7px 7px 11px 0px rgba(0, 0, 0, 0.1),
-    -7px -7px 11px 0px rgba(77, 77, 77, 0.1);
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.25),
+    -3px -3px 4px 0px rgba(77, 77, 77, 0.1);
   border-radius: 25px;
   transition: all 0.2s ease-out;
   border: 2px solid var(--clr-bg-1);
   color: var(--clr-primary-4);
 }
 .btn:hover {
-  color: var(--clr-primary-6);
+  color: var(--clr-primary-8);
   /* transform: scale(1.1); */
+}
+.btn:focus {
+  box-shadow: -3px -3px 4px 0 rgba(77, 77, 77, 0.1) inset,
+  2px 2px 3px 0 rgba(0,0,0,.25) inset;
 }
 .heroIcons {
   list-style: none;

@@ -11,7 +11,7 @@ export function IconOne() {
     >
       <g>
         <path
-          fill="#541C8C"
+          fill="#A69B55"
           fillOpacity="1"
           fillRule="evenodd"
           strokeWidth="0.183"
@@ -31,7 +31,7 @@ export function IconTwo() {
       version="1.1"
       viewBox="0 0 210 297"
     >
-      <g fill="#09531F" strokeWidth="0.343">
+      <g fill="#52d1da" strokeWidth="0.343">
         <path
           d="M-180.152 -245.357H-119.80399999999999V-228.319H-180.152z"
           transform="matrix(.56272 -.82665 -.99998 -.00668 0 0)"
