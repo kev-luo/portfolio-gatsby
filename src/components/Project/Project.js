@@ -1,4 +1,5 @@
 import React from "react"
+import { FaShareSquare, FaGithub } from "react-icons/fa"
 
 import {
   ProjectContainer,
@@ -24,8 +25,12 @@ const Project = ({ project }) => {
           ))}
         </ProjectStack>
         <ProjectLinks>
-          <a href={repo} target="_blank" rel="noreferrer">Repo</a>
-          <a href={url} target="_blank" rel="noreferrer">Site</a>
+          <a href={repo} target="_blank" rel="noreferrer" className="socialLink">
+            <FaGithub />
+          </a>
+          <a href={url} target="_blank" rel="noreferrer" className="socialLink">
+            <FaShareSquare />
+          </a>
         </ProjectLinks>
       </ProjectInfo>
     </ProjectContainer>

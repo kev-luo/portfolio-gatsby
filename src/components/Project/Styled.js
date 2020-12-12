@@ -27,7 +27,9 @@ export const ProjectInfo = styled.div`
 `
 
 export const ProjectTitle = styled.h3`
-
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
 `
 
 export const ProjectDescription = styled.p`
@@ -48,4 +50,7 @@ export const ProjectStack = styled.div`
 `
 export const ProjectLinks = styled.div`
   margin-top: .75rem;
+  a {
+    font-size: 1.2rem;
+  }
 `
