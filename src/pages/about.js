@@ -29,6 +29,17 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
+  li {
+    margin-bottom: 1rem;
+  }
+`
+const EdItem = styled.li`
+`
+const Item = styled.li`
+  margin-right: .5rem;
+`
+const SectionTitle = styled.h3`
 `
 
 const About = ({ data }) => {
@@ -36,8 +47,9 @@ const About = ({ data }) => {
     allStrapiAbout: { nodes },
   } = data
   const {
-    content,
     stack,
+    education,
+    hobbies,
     title,
     image: {
       childImageSharp: { fluid },
@@ -53,10 +65,22 @@ const About = ({ data }) => {
             <Overlay />
           </StyledImg>
           <ContentContainer>
-            <div>{content}</div>
+            <SectionTitle>Education</SectionTitle>
+            <List>
+              {education.map(item => (
+                <EdItem key={item.id}>{item.name}</EdItem>
+              ))}
+            </List>
+            <SectionTitle>Skills</SectionTitle>
             <List>
               {stack.map(item => (
-                <li key={item.id}>{item.name}</li>
+                <Item key={item.id}>{item.name}</Item>
+              ))}
+            </List>
+            <SectionTitle>Hobbies</SectionTitle>
+            <List>
+              {hobbies.map(item => (
+                <Item key={item.id}>{item.name}</Item>
               ))}
             </List>
           </ContentContainer>
@@ -72,8 +96,15 @@ export const query = graphql`
       nodes {
         id
         title
-        content
         stack {
+          name
+          id
+        }
+        education {
+          name
+          id
+        }
+        hobbies {
           name
           id
         }
