@@ -51,7 +51,7 @@
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-bg-1);
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-9);
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;

@@ -1,14 +1,15 @@
 import styled from "styled-components"
+import { animated } from "react-spring";
 import BackgroundImage from "gatsby-background-image"
 
-export const ProjectImg = styled(BackgroundImage)`
+export const ProjectImg = styled(animated(BackgroundImage))`
   @media screen and (min-width: 992px) {
     height: 30rem;
     grid-area: 1/1/1 / span 8;
   }
 `
 
-export const ProjectInfo = styled.div`
+export const ProjectInfo = styled(animated.div)`
   background: rgba(255,255,255,0.2);
   padding: 1rem 2rem;
   backdrop-filter: blur(40px);
@@ -45,6 +46,7 @@ export const ProjectTitle = styled.h3`
 export const ProjectDescription = styled.p`
   margin-bottom: 0.75rem;
 `
+
 export const ProjectStack = styled.div`
   span {
     display: inline-block;
@@ -58,6 +60,7 @@ export const ProjectStack = styled.div`
     border-radius: 5px;
   }
 `
+
 export const ProjectLinks = styled.div`
   margin-top: 0.75rem;
   a {
