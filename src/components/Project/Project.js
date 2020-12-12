@@ -1,25 +1,18 @@
-import React from 'react'
-import Image from "gatsby-image"
+import React from "react"
+
+import { ProjectContainer, ProjectImg, ProjectInfo } from "./Styled"
 
 const Project = ({ project }) => {
-  const { description, media, name } = project;
+  const { description, media, name } = project
   return (
-    <div style={styles.container}>
-      <h3>{name}</h3>
-      <Image
-          fluid={media.childImageSharp.fluid}
-          alt="projectGif"
-      />
-      <p>{description}</p>
-    </div>
+    <ProjectContainer>
+      <ProjectImg fluid={media.childImageSharp.fluid} alt="projectGif" />
+      <ProjectInfo>
+        <h3>{name}</h3>
+        <p>{description}</p>
+      </ProjectInfo>
+    </ProjectContainer>
   )
-}
-
-const styles = {
-  container: {
-    width: "500px",
-    height: "500px",
-  }
 }
 
 export default Project
