@@ -101,14 +101,13 @@ const Form = () => {
     })
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-  }
-
   return (
     <Container>
       <h2>Get In Touch</h2>
-      <StyledForm onSubmit={e => handleSubmit(e)}>
+      <StyledForm
+        action="https://formspree.io/f/xjvpapwd"
+        method="POST"
+      >
         <Label>
           Name
           <Input

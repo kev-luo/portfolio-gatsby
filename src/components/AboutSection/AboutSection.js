@@ -20,14 +20,6 @@ export default function AboutSection({ about }) {
     z: 20,
   })
 
-  const itemProps = useSpring({
-    to: { x: open.x ? 360 : 0, y: open.y ? 360 : 0, z: open.z ? 360 : 0 },
-    x: 0,
-    y: 0,
-    z: 0,
-    delay: 500,
-  })
-
   const edTrail = useTrail(about.education.length, {
     x: open.x ? 360 : 0,
     from: { x: 0 },
@@ -35,6 +27,9 @@ export default function AboutSection({ about }) {
   const stackTrail = useTrail(about.stack.length, {
     y: open.y ? 360 : 0,
     from: { y: 0 },
+    config: {
+      tension: 500
+    }
   })
   const hobbiesTrail = useTrail(about.hobbies.length, {
     z: open.z ? 360 : 0,
@@ -61,12 +56,6 @@ export default function AboutSection({ about }) {
               <Border />
             </Item>
           ))}
-          {/* {about.education.map(item => (
-            <Item key={item.id} style={{ clipPath: itemProps.x.interpolate(v => `circle(${v}% at 100% 0)`)}}>
-              {item.name}
-              <Border />
-            </Item>
-          ))} */}
         </List>
         <Initial style={{ width: props.x.interpolate(v => `${v}%`) }} />
       </Card>
@@ -88,12 +77,6 @@ export default function AboutSection({ about }) {
               <Border />
             </Item>
           ))}
-          {/* {about.stack.map(item => (
-            <Item key={item.id} style={{ clipPath: itemProps.y.interpolate(v => `circle(${v}% at 100% 0)`)}}>
-              {item.name}
-              <Border />
-            </Item>
-          ))} */}
         </List>
         <Initial style={{ width: props.y.interpolate(v => `${v}%`) }} />
       </Card>
@@ -115,19 +98,6 @@ export default function AboutSection({ about }) {
               <Border />
             </Item>
           ))}
-          {/* {about.hobbies.map(item => (
-            <Item
-              key={item.id}
-              style={{
-                clipPath: itemProps.z.interpolate(
-                  v => `circle(${v}% at 100% 0)`
-                ),
-              }}
-            >
-              {item.name}
-              <Border />
-            </Item>
-          ))} */}
         </List>
         <Initial style={{ width: props.z.interpolate(v => `${v}%`) }} />
       </Card>
