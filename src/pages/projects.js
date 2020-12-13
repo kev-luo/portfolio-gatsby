@@ -11,7 +11,7 @@ export default ({ data }) => {
   } = data
   return (
     <Layout>
-      <SEO title="Projects" />
+      <SEO title="Projects" content="This is the projects page"/>
       <Projects projects={nodes} title="Featured Projects" />
     </Layout>
   )

@@ -13,7 +13,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" content="This is the about page"/>
       <StyledPage>
         <SectionTitle>{nodes[0].title}</SectionTitle>
         <SectionCenter>

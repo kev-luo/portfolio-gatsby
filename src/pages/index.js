@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 export default () => {
   return (
     <Layout>
-      <SEO title="Home" content="This is our home page" />
+      <SEO title="Home" content="This is the home page" />
       <Hero />
     </Layout>
   )
