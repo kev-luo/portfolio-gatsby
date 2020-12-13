@@ -16,8 +16,8 @@ const Project = ({ project }) => {
   const { description, media, name, stack, repo, url, left } = project
   const imgProps = useSpring({
     opacity: 1,
-    height: 400,
-    from: { opacity: 0, height: 0},
+    transform: "translate(0px)",
+    from: { opacity: 0, transform: left ? "translate(10%)" : "translate(-10%)"},
     config: {
       tension: 500,
       friction: 100,
@@ -34,11 +34,11 @@ const Project = ({ project }) => {
       transform: left ? "translate(-30%)" : "translate(30%)",
       backdropFilter: "blur(0px)",
     },
-    delay: 800,
+    delay: 900,
     config: {
-      tension: 180,
-      friction: 25,
-      clamp: true
+      tension: 500,
+      friction: 100,
+      mass: 5,
     },
   })
   console.log(infoProps)

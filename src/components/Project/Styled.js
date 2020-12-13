@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 export const ProjectImg = styled(animated(BackgroundImage))`
   @media screen and (min-width: 992px) {
-    height: 30rem;
+    height: 25rem;
     grid-area: 1/1/1 / span 8;
   }
 `
