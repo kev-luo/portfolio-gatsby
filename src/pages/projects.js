@@ -20,6 +20,7 @@ export const query = graphql`
         name
         description
         id
+        left
         stack {
           name
           id

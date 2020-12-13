@@ -10,9 +10,9 @@ export const ProjectImg = styled(animated(BackgroundImage))`
 `
 
 export const ProjectInfo = styled(animated.div)`
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.2);
   padding: 1rem 2rem;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(90px);
   border: solid 2px transparent;
   background-clip: padding-box;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, .03);
@@ -52,7 +52,7 @@ export const ProjectStack = styled.div`
     display: inline-block;
     margin: 0.25rem 0.5rem 0.25rem 0;
     padding: 0.25rem 0.5rem;
-    background: var(--clr-bg-1);
+    background: var(--clr-grey-8);
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     font-size: 0.85rem;

@@ -13,24 +13,35 @@ import {
 } from "./Styled"
 
 const Project = ({ project }) => {
-  const { description, media, name, stack, repo, url } = project
+  const { description, media, name, stack, repo, url, left } = project
   const imgProps = useSpring({
-    to: { opacity: 1, transform: "translate(0px)" },
-    from: { opacity: 0, transform: "translate(-50%)" },
+    opacity: 1,
+    height: 400,
+    from: { opacity: 0, height: 0},
+    config: {
+      tension: 500,
+      friction: 100,
+      mass: 5,
+    }
   })
   const infoProps = useSpring({
-    to: async next => {
-      await next({ opacity: 1 })
-      await next({ transform: "translate(0px)", backdropFilter: "blur(40px)" })
-    },
+    to: [
+      { opacity: 1 },
+      { transform: "translate(0px)", backdropFilter: "blur(90px)" },
+    ],
     from: {
       opacity: 0,
-      transform: "translate(-30%)",
+      transform: left ? "translate(-30%)" : "translate(30%)",
       backdropFilter: "blur(0px)",
     },
-    delay: 1000
+    delay: 800,
+    config: {
+      tension: 180,
+      friction: 25,
+      clamp: true
+    },
   })
-  console.log(infoProps);
+  console.log(infoProps)
   return (
     <ProjectContainer>
       <ProjectImg
