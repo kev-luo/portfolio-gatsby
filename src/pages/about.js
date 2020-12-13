@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import { StyledPage, SectionTitle, SectionCenter } from "../styles/Styled"
 import Content from "../components/AboutSection/Content";
+import SEO from "../components/SEO";
 
 export default ({ data }) => {
   const {
@@ -12,6 +13,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="About" />
       <StyledPage>
         <SectionTitle>{nodes[0].title}</SectionTitle>
         <SectionCenter>

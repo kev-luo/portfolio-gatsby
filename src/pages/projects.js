@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/Layout"
 import Projects from "../components/Projects/Projects"
+import SEO from "../components/SEO"
 
 export default ({ data }) => {
-  const { allStrapiProjects: { nodes } } = data;
+  const {
+    allStrapiProjects: { nodes },
+  } = data
   return (
     <Layout>
-      <Projects projects={nodes} title="Featured Projects"/>
+      <SEO title="Projects" />
+      <Projects projects={nodes} title="Featured Projects" />
     </Layout>
   )
 }
