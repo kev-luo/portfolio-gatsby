@@ -1,43 +1,135 @@
 import React, { useState } from "react"
-import { useSpring } from "react-spring"
+import { useSpring, useTrail } from "react-spring"
 
-import { ContentContainer, Card, ListTitle, List, Initial, Hidden } from "./Styled"
-import ListItem from "./ListItem"
+import {
+  ContentContainer,
+  Card,
+  ListTitle,
+  List,
+  Initial,
+  Item,
+  Border,
+} from "./Styled"
 
 export default function AboutSection({ about }) {
-  const [{x, y, z}, set] = useSpring(() => ({ x: 20, y: 20, z: 20}))
+  const [open, setOpen] = useState({ x: false, y: false, z: false })
+  const props = useSpring({
+    to: { x: open.x ? 100 : 20, y: open.y ? 100 : 20, z: open.z ? 100 : 20 },
+    x: 20,
+    y: 20,
+    z: 20,
+  })
+
+  const itemProps = useSpring({
+    to: { x: open.x ? 360 : 0, y: open.y ? 360 : 0, z: open.z ? 360 : 0 },
+    x: 0,
+    y: 0,
+    z: 0,
+    delay: 500,
+  })
+
+  const edTrail = useTrail(about.education.length, {
+    x: open.x ? 360 : 0,
+    from: { x: 0 },
+  })
+  const stackTrail = useTrail(about.stack.length, {
+    y: open.y ? 360 : 0,
+    from: { y: 0 },
+  })
+  const hobbiesTrail = useTrail(about.hobbies.length, {
+    z: open.z ? 360 : 0,
+    from: { z: 0 },
+  })
 
   return (
     <ContentContainer>
-      <Card onMouseEnter={() => set({ x: 100})} onMouseLeave={() => set({ x: 20})}>
+      <Card
+        onMouseEnter={() => setOpen({ ...open, x: !open.x })}
+        onMouseLeave={() => setOpen({ ...open, x: !open.x })}
+      >
         <ListTitle>Eduction</ListTitle>
         <List>
-          {about.education.map(item => (
-            <ListItem key={item.id} content={item.name} />
+          {edTrail.map(({ x, ...rest }, index) => (
+            <Item
+              key={index}
+              style={{
+                ...rest,
+                clipPath: x.interpolate(v => `circle(${v}% at 100% 0)`),
+              }}
+            >
+              {about.education[index].name}
+              <Border />
+            </Item>
           ))}
+          {/* {about.education.map(item => (
+            <Item key={item.id} style={{ clipPath: itemProps.x.interpolate(v => `circle(${v}% at 100% 0)`)}}>
+              {item.name}
+              <Border />
+            </Item>
+          ))} */}
         </List>
-        <Initial style={{width: x.interpolate(v => `${v}%`)}}/>
-        <Hidden />
+        <Initial style={{ width: props.x.interpolate(v => `${v}%`) }} />
       </Card>
-      <Card onMouseEnter={() => set({ y: 100})} onMouseLeave={() => set({ y: 20})}>
+      <Card
+        onMouseEnter={() => setOpen({ ...open, y: !open.y })}
+        onMouseLeave={() => setOpen({ ...open, y: !open.y })}
+      >
         <ListTitle>Skills/Tech</ListTitle>
         <List>
-          {about.stack.map(item => (
-            <ListItem key={item.id} content={item.name} />
+          {stackTrail.map(({ y, ...rest }, index) => (
+            <Item
+              key={index}
+              style={{
+                ...rest,
+                clipPath: y.interpolate(v => `circle(${v}% at 100% 0)`),
+              }}
+            >
+              {about.stack[index].name}
+              <Border />
+            </Item>
           ))}
+          {/* {about.stack.map(item => (
+            <Item key={item.id} style={{ clipPath: itemProps.y.interpolate(v => `circle(${v}% at 100% 0)`)}}>
+              {item.name}
+              <Border />
+            </Item>
+          ))} */}
         </List>
-        <Initial style={{width: y.interpolate(v => `${v}%`)}}/>
-        <Hidden />
+        <Initial style={{ width: props.y.interpolate(v => `${v}%`) }} />
       </Card>
-      <Card onMouseEnter={() => set({ z: 100})} onMouseLeave={() => set({ z: 20})}>
+      <Card
+        onMouseLeave={() => setOpen({ ...open, z: !open.z })}
+        onMouseEnter={() => setOpen({ ...open, z: !open.z })}
+      >
         <ListTitle>Hobbies</ListTitle>
         <List>
-          {about.hobbies.map(item => (
-            <ListItem key={item.id} content={item.name} />
+          {hobbiesTrail.map(({ z, ...rest }, index) => (
+            <Item
+              key={index}
+              style={{
+                ...rest,
+                clipPath: z.interpolate(v => `circle(${v}% at 100% 0)`),
+              }}
+            >
+              {about.hobbies[index].name}
+              <Border />
+            </Item>
           ))}
+          {/* {about.hobbies.map(item => (
+            <Item
+              key={item.id}
+              style={{
+                clipPath: itemProps.z.interpolate(
+                  v => `circle(${v}% at 100% 0)`
+                ),
+              }}
+            >
+              {item.name}
+              <Border />
+            </Item>
+          ))} */}
         </List>
-        <Initial style={{width: z.interpolate(v => `${v}%`)}}/>
-        <Hidden />
+        <Initial style={{ width: props.z.interpolate(v => `${v}%`) }} />
       </Card>
     </ContentContainer>
   )

@@ -41,16 +41,6 @@ export const Initial = styled(animated.div)`
   z-index: -7;
 `
 
-export const Hidden = styled(animated.div)`
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  background: green;
-  right: 0;
-  top: 0;
-  z-index: -6;
-`
-
 export const ListTitle = styled.h3``
 
 export const List = styled.ul`
