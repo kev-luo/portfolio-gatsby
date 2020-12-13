@@ -1,13 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
-    siteTitle: "Kevin Luo",
-    description: "Kevin's portfolio site",
+    siteTitle: "Kevin Luo Portfolio",
+    description: "Kevin's portfolio site built with Gatsby",
     author: "Kevin Luo",
     image: "/share.PNG",
     siteUrl: "https://kevinluo.netlify.app",
@@ -17,7 +11,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/404`],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
