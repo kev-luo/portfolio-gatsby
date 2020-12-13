@@ -1,11 +1,12 @@
 import React from "react"
 
-import { Item } from "./Styled";
+import { Item, Border } from "./Styled";
 
 export default function ListItem({ content }) {
   return (
     <Item>
       {content}
+      <Border/>
     </Item>
   )
 }
